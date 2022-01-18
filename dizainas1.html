@@ -4,57 +4,52 @@
     <title>Title</title>
     <meta charset="UTF-8">
 	<style>
+
     	article p {
-        border: none;
-        margin: 10px;
-        padding: 0px;
+			border: none;
+      		margin: 10px;
+      		padding: 0px;
         }
-		h1, h2, h3 {
-			 text-transform: capitalize;
+		h2, h3 {
+			text-transform: capitalize;
+            margin: 0px;
+      		padding: 0px;
 		}
 		#left {
-			width: 85%;
+			width: 100%;
 			border-bottom: 1px solid grey;
             border-top: 1px solid grey;
-            margin: 0px;
-            padding:10px;
+		`	padding-left: 0px;
+  			margin-top: 0px;
+            font-style: italic;
+            text-aling: right;
 		}
-        #midle {
-			width: 1%;
-			border-bottom: 1px solid grey;
-            border-top: 1px solid grey;
-            margin: 0px;
-            padding: 10px;
-            
-         }
+
 		#right {
-			width: 14%;
+			width: 100%;
 			border-bottom: 1px solid grey;
             border-top: 1px solid grey;
-            margin: 0px;
-            padding: 10px;
+ 			padding-left: 0px;
+  			margin-top: 0px;
             font-style: italic;
+            text-aling: right;
             
          }
-        	#left2, #left3 {
-			width: 85%;
+        #left2, #left3 {
+			width: 100%;
 			border-bottom: 1px solid grey;
             margin: 0px;
-            padding:10px;
+            padding: 0px;
+            text-aling: right;
 		}
-        #midle2, #midle3 {
-			width: 1%;
-			border-bottom: 1px solid grey;
-            margin: 0px;
-            padding: 10px;
-            
-         }
 		#right2, #right3 {
-			width: 14%;
+			width: 100%;
 			border-bottom: 1px solid grey;
             margin: 0px;
-            padding: 10px;
+            padding: 0px;
             font-style: italic;
+            text-aling: right; 
+            >
             
          }
         footer {
@@ -63,32 +58,30 @@
             margin: 10x;
             padding: 0px
         }
-       
-
+        a:visited, a:link {
+        	text-decoration: none;
+            color: green
+        }
+        
+        a:hover, a:active {
+        	text-decoration: none;
+            color: red
+        }
 	</style
 </head>
 <body>
 	<main>
+
+		<h1>Simple news site</h1>
+
+		<h2>News</h2>
+
 	<table>
 			<tr>
-				<td>
-					<h1>Simple news site</h1>
-				</td>
+				<td id="left"><h3>About this tamplate</h3></td>
+				<td id="right"><p>February 15, 2003</p></td>
 			</tr>
 	</table>
-		<table>
-		<tr>
-			<td>
-				<h2>News</h2>
-			</td>
-		</tr>
-		</table>
-		<table>
-			<tr>
-				<td id="left"><h3>About this tamplate</h3></td>
-				<td id="midle"><t/d>
-				<td id="right"><p>February 15, 2003</p></td>
-		</table>
 	<article>
 		<table>
 			<td>
@@ -102,7 +95,6 @@
 		<table>
 			<tr>
 				<td id="left2"><h3>Creating news on Your Site</h3></td>
-				<td id="midle2"></td>
 				<td id="right2"><p>January 17, 2003</p></td>
 			</tr>
 		</table>
@@ -117,7 +109,6 @@
 		<table>
 			<tr>
 				<td id="left3"><h3>Create a new Archive</h3></td>
-				<td id="midle3"></td>
 				<td id="right3"><p>Januart 15, 2003</p></td>
 			</tr>
 		</table>
