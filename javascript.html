@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+	</style>
+</head>
+<body>
+        <div id="mydiv">
+            Labas
+        </div>
+
+        <script>
+            let elem = document.getElementById('mydiv').innerHTML='<div>Labas labas</div'; 
+            elem.insertHTML += "Hello";
+            elem.insertHTML += "Labas";
+            let st = document.getElementById("mydiv").style;
+            st.backgroundColor = "green";
+            st.padding = "10px";
+            st.border = "5px solid black";
+
+            //input salygos
+            let x = 35;
+            let y = 10;
+
+            // algorithm veiksmai
+            let sum = x+y;
+            let diff = x-y;
+            let mult = x*y;
+            let div = x/y;
+            let mod = x%y;
+
+            // output rezltatas
+            console.log("Hello, World!");
+            console.log("Labas pasauli!");
+            console.log("Hello, World!", '\\Hello, \"\'World!');
+            console.log("1989");
+            console.log(1989);
+            console.log("1989script1989");
+            console.log(1989, 1989, 1989);
+            console.log(1989, "1989", '1989');
+            console.log('19'+"89");
+            console.log(19+89);
+            console.log('19'+89);
+            console.log("Today is Wednesday");
+            console.log("Sum of", 5,"and",8,"is", 5+8);
+            console.log("Sum of 5 and 8 is" + (5+8));
+            console.log("Liekana" + 5%2, 55%5, 55%4);
+            console.log(x);
+            console.log("The value of x is");
+            console.log("The value of y is");
+            console.log("The value of x is" + x);
+            console.log("The value of y is" + y);
+            console.log(x+y);
+            console.log(x-y);
+            console.log(x*y);
+            console.log(x/y);
+            console.log(x%y);
+            console.log(sum);
+            console.log(diff);
+            console.log(mult);
+            console.log(div);
+            console.log(mod);
+
+
+        </script>
+</body>
+</html>
