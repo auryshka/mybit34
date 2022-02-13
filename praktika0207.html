@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+	</style>
+</head>
+<body>
+
+    <script>
+        /*1*/
+        function nGerasBlogas (number){
+            if (number >=0){
+                console.log("Skaicius" + number + " yra geras  skaicius");
+            }
+            if (number <0){
+                console.log("Skaicius" + number + " yra blogas  skaicius");
+                }                    
+        }
+
+        nGerasBlogas(20);
+        nGerasBlogas(-20);
+        /*2*/
+        function nSkaicius (number){
+            if (number ==1){
+                console.log("Eiti galima");
+            }
+            if (number ==2){
+                console.log("Palaukite");
+                }   
+            if (number ==3){
+                console.log("Eiti negalima");
+                }                 
+        }   
+
+        nSkaicius(1);
+        nSkaicius(2);
+        nSkaicius(3);
+        /*3*/
+        function knygos (d, k, n){
+            if (d=2 && k==8 && n==4){
+                console.log("Knygos telpa i dezes!")
+            }
+            if (d=3 && k==18 && n==5){
+                console.log("Knygos netelpa i dezes!")
+            }
+        }
+
+        knygos(2,8,4);
+        knygos(3,18,5);
+        /*4*/
+        function polindromic(number){
+            if (number >= 1000 && number <10000){
+                let ketvirtas = number % 10;
+                let trecias = Math.floor(number / 10) % 10;
+                let antras = Math.floor(number / 100) % 10;
+                let pirmas = Math.floor(number / 1000) % 10;
+                if (pirmas == ketvirtas && antras==trecias){
+                    console.log("Polindromic number!");
+                } else {
+                    console.log("Not polindromic number!")
+                }
+        }
+        }   
+
+        polindromic(1221);
+        polindromic(1223);
+        polindromic(1991);
+        /*5*/
+        function bilietas (number){
+                let sestas = number % 10;
+                let penktas = Math.floor(number / 10) % 10;
+                let ketvirtas = Math.floor(number / 100) % 10;
+                let trecias = Math.floor(number / 1000) % 10;
+                let antras = Math.floor(number / 1000) % 10;
+                let pirmas = Math.floor(number / 10000) % 10;
+
+                if ((pirmas + antras+trecias+ketvirtas+penktas+sestas) % 4 ==0){
+                    console.log("LIMINGAS BILIETAS!");
+                } else {
+                    console.log("Nelaimingas bilietas!")
+                }
+        }
+
+        bilietas (222442);
+        bilietas (111111);
+        bilietas (444444);
+        /*6*/
+        function yers (number){
+            if (number % 4 ==0 && number % 100 !=0) {
+                console.log("Keiamieji meta!");
+            } else {
+                console.log("Paprastieji metai!");
+                }
+            }
+
+        yers (1992);
+        yers (2000);
+
+        /*7*/
+        function polindromic2(number){
+            if (number >= 10000 && number <100000){
+                let penktas = number % 10;
+                let ketvirtas = Math.floor(number / 10) % 10;
+                let trecias = Math.floor(number / 100) % 10;
+                let antras = Math.floor(number / 1000) % 10;
+                let pirmas = Math.floor(number / 10000) % 10;
+                if (pirmas == penktas && antras==ketvirtas){
+                    console.log(number + "is polindromic number!");
+                } else {
+                    console.log(number + "is not polindromic number!")
+                }
+        }
+        }
+
+        polindromic2(12321);
+        polindromic2(12423); 
+
+        /*8*/
+        function kuris (number){
+            if (number == 1,3,5) {
+                console.log("Kambarį tvarkys jaunėlis!");
+            }
+            if (number == 2,4,6){
+                console.log("Kambarį tvarkys vyresnėlis");
+            }
+        }
+
+            kuris (1);
+            kuris (4);
+
+        /*9*/
+        function pazimys (p1, p2, p3){
+            if (p1 > p2 & p1 > p3) {
+                console.log("Pirmas gavo didziausia pazymi!");
+            }
+            if (p2 > p1 & p2 > p3) {
+                console.log("Antras gavo didziausia pazymi!");
+            }
+            if (p3 > p2 & p3 > p1) {
+                console.log("Trecias gavo didziausia pazymi!");
+            }
+        }
+            pazimys (3,2,1); 
+            pazimys (1,2,1); 
+            pazimys (5,8,9); 
+
+        /*10*/
+        function metaidienos (d){
+            if (d==1 || d==3 || d==5 || d==7 || d==8 || d==10 || d==12) {
+                console.log("Menesis turi 31d!");
+            }
+            if (d==4 || d==6 || d==9 || d==11) {
+                console.log("Menesis turi 30d!");
+            }
+            if (d==2) {
+                console.log("Menesis turi 28d!");
+            }  
+        }  
+          metaidienos (1);
+          metaidienos (2);
+          metaidienos (3);
+          metaidienos (4);
+
+          /*11*/
+        let v1 = 8 /* kiek h kai iseina */
+        let m1 = 29 /* kiek min kai iseina */
+        let v = 9 /* pamoka prasideda h */ 
+        let m = 5 /* pamoka prasideda min */
+
+        function arspes (m2){
+            if (((v1*60+m1)+m2) <= (v*60 + m)) {
+                console.log("Jeigu iki mokyklos", + m2 + "min. Petras į pamoką nepavėluos");
+            } else { 
+                console.log("Jeigu iki mokyklos", + m2 + "min. Petras į pamoką pavėluos"); 
+            }
+        }
+
+        arspes(23);
+        arspes(43);
+        
+
+          /*12*/
+
+        function degtukai (n){
+            if (n%3 ==0) {
+                console.log("Trikampį sudėlioti galima!");
+            } else {
+                console.log("Trikampį sudėlioti negalima!");
+            }     
+        }
+        degtukai (6);
+        degtukai (4);
+
+        /*13*/
+        function olimpiada (n){
+            if (n>=1896 && n%4 ==0){
+                m=(n-1896)/4
+                console.log(m)
+             } else {
+                console.log("Metai neolimpiniai.")
+             }
+        
+        }
+        
+        olimpiada (1904);
+        olimpiada (2005);
+
+        /*14*/
+        function sprendiniai (a, b, c){
+            D=b*b-4*a*c;
+                if (D==0) {
+                    x1=1*(b/2*a);
+                    console.log("Vienas sprendinys", x1);
+                } else if (D > 0){
+                    x2 = (b + Math.sqrt(D)) / (2*a);
+                    x3 = (b - Math.sqrt(D)) / (2*a);
+                    console.log("Du sprendiniai", x2, x3);
+                } else {
+                    console.log("Nėra sprendinių");
+
+                }
+            }
+            
+        sprendiniai (1,2,1);
+        sprendiniai (1,4,3);
+        sprendiniai (1,3,4);
+
+        /*15*/
+        let p=20; /* ledu kaina */
+        /* x1 kiek porciju, x2 kie lieka*/
+
+        function kiekledu (c){
+            x1 = Math.floor(c / p);
+            x2 = c%p;
+            console.log("Saulius nusipirks", x1, "porcijas ledų, liks", x2, "centų")
+            }
+        
+        kiekledu(50);
+        kiekledu(77);
+
+    /*16*/
+    /* n deziu skaicius, 
+    m kiek telpa i masina, 
+    k kiek kartu reikes vaziuoti*/
+    let m3 = 14;
+    
+    function kiekkartu (n){
+        k = Math.floor(n/m3);
+        i = n%m3;
+        if (i !=0){
+            console.log("Reikes vaziuoti", k+1, "kartu(s)")
+        } else {
+            console.log("Reikes vaziuoti", k, "kartu(s)")
+        }
+    }
+
+    kiekkartu (101);
+    kiekkartu (28);
+
+    /*17*/
+    function skaiciai11 (a,b){
+        if (a > b){
+            return (--a, ++b);
+            console.log(a,b);
+        }
+    }
+
+    skaiciai11 (2,1);
+
+    
+    </script>
+
+</body>
+</html>
