@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+	</style>
+</head>
+<body>
+
+    <script>
+
+function randomSkaicius(min, max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+let masyvas = [];
+let didziausi = 0;
+
+/*1. Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra
+atsitiktiniai skaičiai nuo 5 iki 25.*/
+
+for(let i = 0; i < 30; i++){
+    masyvas[i] = randomSkaicius(5,25);
+/*2 a. Suskaičiuokite kiek masyve yra reikšmių didesnių už 10;*/
+    if( masyvas [i] > 10) didziausi++;
+}
+console.log(masyvas);
+
+ console.log(didziausi);
+
+ /*2 b. Raskite didžiausią masyvo reikšmę ir jos indeksą arba indeksus jeigu yra keli;*/
+
+ let max = masyvas [0];
+ let maxIndeksas= [];
+
+  for (let i =1; i< masyvas.length; i++) {
+      if (masyvas[i] > max) {
+        max=masyvas[i];
+      }
+  }
+  for (let i =1; i< masyvas.length; i++){
+      if (max == masyvas[i]){
+          maxIndeksas.push(i);
+      }
+  }
+  console.log(max);
+  console.log(maxIndeksas);
+
+/*2 c. Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;*/
+let evenSum = 0;
+for (let i = 0; i<masyvas.length; i++){
+    if(i%2==0){
+    evenSum += masyvas[i];
+    }
+}
+console.log(evenSum);
+
+/* 2 d. Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos
+reikšmės indeksas;*/
+let masyvas2 = [];
+for (let i = 0; i < 30; i++){
+    masyvas2[i] = masyvas[i] - i;
+}
+console.log(masyvas2);
+
+/* 2 e. Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad
+bendras masyvas padidėtų iki indekso 39;*/
+for (i = 30; i < 40; i++){
+    masyvas[i] = randomSkaicius(5,25);
+}
+console.log(masyvas);
+
+/* 2 f. Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš
+neporinių indekso reikšmių, o kitas iš porinių;*/
+let masyvaseven = [];
+let masyvasodd = [];
+for (let i = 0; i < 40; i+=2){
+    masyvaseven.push(masyvas[i]);
+    masyvasodd.push(masyvas[i+1]);
+}
+console.log(masyvaseven);
+console.log(masyvasodd);
+
+/* 2g. Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie
+didesni už 15;*/
+for (let i = 0; i < 40; i++){
+    if (i % 2 == 0 && i > 15){
+        masyvas[i] = 0;
+    }
+}
+console.log(masyvas)
+    </script>
+</body>
+</html>
